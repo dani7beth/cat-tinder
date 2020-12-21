@@ -1,6 +1,6 @@
-# Starter Proj
+# Cat Tinder
 ## Steps to setup and run
-1. `git clone git@github.com:jimibue/starter.git` CHANGE THIS TO YOUR REPO
+1. `git clone git@github.com:dani7beth/cat-tinder.git` CHANGE THIS TO YOUR REPO
 2. `cd project-name`
 3. `bundle install`
 4. in database.yml change name of database `what_ever_you_named_your_start_project` to **project-name**
