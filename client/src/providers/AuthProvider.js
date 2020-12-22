@@ -25,7 +25,8 @@ export class AuthProvider extends React.Component {
         history.push("/");
       })
       .catch((err) => {
-        alert(err.response.data.errors);
+        alert(err);
+        // check err.response.data.errors?
       });
   };
 

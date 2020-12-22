@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Segment, Header, Form, Button} from "semantic-ui-react";
+import { Segment, Header, Form, Button } from "semantic-ui-react";
 import { AuthContext } from "../providers/AuthProvider";
 
 export default (props) => {
@@ -10,10 +10,10 @@ export default (props) => {
   const { handleRegister } = useContext(AuthContext);
 
   const handleSubmit = () => {
-    //frontend check 
-    if(password === passwordConfirmation){
+    //frontend check
+    if (password === passwordConfirmation) {
       handleRegister({ email, password }, props.history);
-    }else{
+    } else {
       alert(`passwords don't match`);
     }
   };
@@ -21,7 +21,7 @@ export default (props) => {
   return (
     <>
       <Segment>
-        <Header  as="h1" textAlign="center">
+        <Header as="h1" textAlign="center">
           Register
         </Header>
         <Form onSubmit={handleSubmit}>

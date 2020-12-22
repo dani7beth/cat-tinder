@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
 export default () => {
+  const history = useHistory();
   const auth = useContext(AuthContext);
-  const { user, handleLogout } = auth;
+  const { authenicated, handleLogout, id } = auth;
 
   const rightNavItem = () => {
-    if (user) {
-      return <Menu.Item name="logout" onClick={() => handleLogout()} />;
+    if (authenicated) {
+      return <Menu.Item name="logout" onClick={() => handleLogout(history)} />;
     } else {
       return (
         <>
